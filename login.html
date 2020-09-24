@@ -1,0 +1,175 @@
+
+<style>
+    .booble{
+        background color:black;
+        border:3px solid black;
+        padding:5%;
+        margin:15;
+}
+    .center{
+     display:block;
+    margin-left: auto;
+    margin-right: auto;
+        width:500px;
+    }
+
+    span
+    {
+        position: absolute;
+        border:2px solid gray; 
+        width: 100%;
+        padding:10px;
+        margin-bottom:15px;
+        font-size:17px;
+        border-radius:5px;
+        outline : none;
+        border:none;
+        cursor:pointer;
+        color:rgb(160,160,160);
+        cursor: pointer;
+        
+    }
+    *{
+     box-sizing: border-box;   
+    }
+    
+.tab-content
+    {
+        max-width: 400px;
+        margin:auto;
+        margin top: 50px;
+        padding: 10px;
+        border-radius: 10px;
+        background: #fff;
+        font-family:sans-serif;
+    }
+    .tab-content h2
+    {
+        
+        text-align:center;
+    }
+   
+    button{
+        padding:10px;
+        box-sizing:border-box;
+        border:none;
+        font-size=1.3em;
+        border-radius: 15px;
+        font-weight: bold;
+    }
+    button a{
+        text-decoration: none;
+        color: #fff;
+    }
+    button:nth-child(2)
+    {
+        background:rgb(66,103,178);
+        width: 49%
+    }
+     button:nth-child(3)
+    {
+        background:rgb(219,68,55);
+        width: 49%
+    }
+    button:hover{
+        background:rgba(0,0,0,0.6);
+    }
+   form
+    {
+        margin-top: 30px;
+    }
+    input[type=text],input[type="submit"]{
+        width: 100%;
+        padding:10px;
+        margin-bottom:15px;
+        font-size:17px;
+        border-radius:5px;
+        outline : none;
+        border:none;
+        background:rgb(224,224,224);
+
+        
+    }
+    input[type=password]{
+         width: 100%;
+        padding:10px;
+        margin-bottom:15px;
+        font-size:17px;
+        border-radius:5px;
+        outline : none;
+        border:none;
+        background:rgb(224,224,224);
+
+        
+    }
+    input[type=submit]{
+        background:rgb(102,0,204);
+        border:none;
+        color:#fff;
+        font-size: 20px;
+        font font-weight: bold;
+        margin-top=20px;
+        padding: 15px;
+       
+        
+    }
+   
+   
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/f67e983dc9.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+
+<img src="bbl.png" class="center" alt="Bobble logo" title="Bobble logo">
+
+<div class = "booble">
+<div class="tab-content">
+    
+      <h2>Create your account</h2>
+    
+     <button> <a href="#"><i class="fab fa-facebook"></i>  Signup with Facebook</a></button>
+           
+       <button> <a href="#"> <i class="fab fa-google-plus"></i>  Signup with Google</a></button> 
+<!--Taking input of First name, Last name & password -->   
+  <form>
+       <div class="form-element">
+        <input type="text" placeholder="First Name">
+      </div>
+     <div class="form-element">
+        <input type="text" placeholder="Last Name">
+      </div>
+      <div class="form-element">
+        <input type="text" placeholder="Email">
+      </div>
+      <div class="form-element">
+        <input type="password" placeholder="Password"id="password">
+         <span>
+          <i class="far fa-eye" onclick="toggle()" id ="eye"></i>
+             </span>
+      </div>
+      <script>
+var state= false;
+function toggle(){
+    if(state){
+	document.getElementById("password").setAttribute("type","password");
+	document.getElementById("eye").style.color='#7a797e';
+	state = false;
+     }
+     else{
+	document.getElementById("password").setAttribute("type","text");
+	document.getElementById("eye").style.color='#5887ef';
+	state = true;
+     }
+}
+</script>
+      <div class="form-element">
+        <input type="submit" value="Sign Up">
+          
+      </div>
+      </form>
+    </div>
+
+</div>
